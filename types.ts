@@ -4,9 +4,10 @@ export interface Product {
   shortDescription: string;
   fullDescription: string;
   price: number;
+  mrp: number;
   image: string;
-  category: 'Liquid' | 'Powder' | 'Pods' | 'Dish Wash' | 'Surface Cleaner';
-  scent: 'Fresh Sky' | 'Lavender' | 'Unscented' | 'Lemon' | 'Floral';
+  category: 'Liquid' | 'Powder' | 'Pods' | 'Dish Wash' | 'Surface Cleaner' | 'Combo';
+  scent: 'Fresh Sky' | 'Lavender' | 'Unscented' | 'Lemon' | 'Floral' | 'Mixed';
   rating: number;
   reviews: number;
   benefits: string[];

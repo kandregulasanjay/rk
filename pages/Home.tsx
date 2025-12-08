@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Shield, Zap, Heart, Instagram, ChevronRight, Plus, Star } from 'lucide-react';
+import { ArrowRight, CheckCircle, Shield, Zap, Heart, Instagram, ChevronRight, Plus } from 'lucide-react';
 import { PRODUCTS, LAUNDRYGRAM_POSTS } from '../services/data';
 import { DosageCalculator } from '../components/DosageCalculator';
 
@@ -248,16 +248,17 @@ export const Home: React.FC<HomeProps> = ({ addToCart }) => {
                   <h3 className="font-heading font-bold text-lg text-neutral-dark mb-1 group-hover:text-sky-main transition-colors line-clamp-1">{product.name}</h3>
                 </Link>
                 
-                <div className="flex items-center gap-1 mb-3">
-                   <div className="flex text-yellow-400">
-                     <Star className="w-3.5 h-3.5 fill-current" />
+                <div className="flex flex-col gap-1 mb-3">
+                   <div className="flex items-center gap-2">
+                     <span className="text-sm text-gray-400 line-through">₹{product.mrp}</span>
+                     <span className="text-xs font-bold bg-green-100 text-green-700 px-2 py-0.5 rounded">
+                       {Math.round(((product.mrp - product.price) / product.mrp) * 100)}% OFF
+                     </span>
                    </div>
-                   <span className="text-xs font-bold text-gray-500">{product.rating}</span>
-                   <span className="text-xs text-gray-400">({product.reviews})</span>
                 </div>
 
                 <div className="flex items-center justify-between mt-auto">
-                   <span className="font-bold text-xl text-neutral-dark">${product.price.toFixed(2)}</span>
+                   <span className="font-bold text-xl text-neutral-dark">₹{product.price}</span>
                    <Link to={`/products/${product.id}`} className="text-sm font-bold text-sky-main hover:text-sky-deep">
                      Details
                    </Link>

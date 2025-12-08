@@ -4,58 +4,78 @@ import { Product, Store } from '../types';
 // matching the filenames used below.
 
 export const PRODUCTS: Product[] = [
+  // TOP LOAD LIQUID DETERGENTS
   {
     id: 'p1',
-    name: 'DK Smart Wash - Front Load (5L)',
-    shortDescription: 'High-efficiency liquid detergent for front load machines.',
-    fullDescription: 'The 5L DK Smart Wash is specifically formulated for front load washing machines. Its low-suds formula ensures a thorough clean without damaging your machine, while the new smart formula tackles tough stains and preserves fabric color.',
-    price: 24.99,
-    // Ensure you save the 5L bottle image as 'dk_front_5l.jpg' in public/images/
-    image: '/images/dk_front_5l.jpg', 
+    name: 'Liquid Detergent - Top Load (Smart Wash) 1L',
+    shortDescription: 'High-efficiency liquid detergent for top load machines.',
+    fullDescription: 'DK Smart Wash Top Load formula creates the perfect amount of lather to lift dirt in top-loading machines. Special formula that works deep into fibers for a brilliant clean.',
+    price: 130,
+    mrp: 220,
+    image: '/images/dk_top_1l.jpg',
     category: 'Liquid',
     scent: 'Fresh Sky',
     rating: 4.9,
     reviews: 124,
-    benefits: ['Low Suds Formula', 'Color Protection', 'Value Size (5 Liters)', 'Removes Tough Stains'],
-    ingredients: ['Aqua', 'Anionic Surfactants', 'Enzymes', 'Optical Brighteners', 'Perfume']
-  },
-  {
-    id: 'p2',
-    name: 'DK Smart Wash - Front Load (1L)',
-    shortDescription: 'Compact high-efficiency detergent for daily use.',
-    fullDescription: 'Experience the same powerful cleaning performance of DK Smart Wash in a convenient 1 Liter bottle. Perfect for smaller households or limited storage space. Designed for Front Loaders.',
-    price: 6.99,
-    // Ensure you save the 1L purple/blue bottle image here
-    image: '/images/dk_front_1l.jpg',
-    category: 'Liquid',
-    scent: 'Fresh Sky',
-    rating: 4.8,
-    reviews: 89,
-    benefits: ['Smart Wash Technology', 'Prevents Fading', 'Residue Free'],
-    ingredients: ['Aqua', 'Cleaning Agents', 'Stain Removers', 'Fresh Scent']
-  },
-  {
-    id: 'p3',
-    name: 'DK Smart Wash - Top Load (1L)',
-    shortDescription: 'Specially formulated for top load washing machines.',
-    fullDescription: 'DK Smart Wash Top Load formula creates the perfect amount of lather to lift dirt in top-loading machines. The green label signifies our special formula that works deep into fibers for a brilliant clean.',
-    price: 6.99,
-    // Ensure you save the 1L green bottle image here
-    image: '/images/dk_top_1l.jpg',
-    category: 'Liquid',
-    scent: 'Fresh Sky',
-    rating: 4.7,
-    reviews: 156,
     benefits: ['Rich Lather', 'Deep Cleaning', 'Easy Rinse', 'Top Load Optimized'],
     ingredients: ['Aqua', 'Surfactants', 'Sodium Carbonate', 'Fragrance']
   },
   {
+    id: 'p2',
+    name: 'Liquid Detergent - Top Load (Smart Wash) 5L',
+    shortDescription: 'Value pack liquid detergent for top load machines.',
+    fullDescription: 'The 5L DK Smart Wash for top load machines offers exceptional value. Its rich lather formula ensures thorough cleaning while being economical for larger households.',
+    price: 550,
+    mrp: 999,
+    image: '/images/dk_top_5l.jpg',
+    category: 'Liquid',
+    scent: 'Fresh Sky',
+    rating: 4.9,
+    reviews: 98,
+    benefits: ['Rich Lather', 'Value Size (5 Liters)', 'Deep Cleaning', 'Top Load Optimized'],
+    ingredients: ['Aqua', 'Surfactants', 'Sodium Carbonate', 'Fragrance']
+  },
+
+  // FRONT LOAD LIQUID DETERGENTS
+  {
+    id: 'p3',
+    name: 'Liquid Detergent - Front Load (Smart Wash) 1L',
+    shortDescription: 'High-efficiency liquid detergent for front load machines.',
+    fullDescription: 'Experience powerful cleaning performance in a convenient 1 Liter bottle. Perfect for front load washing machines with low-suds formula that protects your machine.',
+    price: 130,
+    mrp: 220,
+    image: '/images/dk_front_1l.jpg',
+    category: 'Liquid',
+    scent: 'Fresh Sky',
+    rating: 4.8,
+    reviews: 156,
+    benefits: ['Low Suds Formula', 'Color Protection', 'Machine Safe', 'Removes Tough Stains'],
+    ingredients: ['Aqua', 'Anionic Surfactants', 'Enzymes', 'Optical Brighteners', 'Perfume']
+  },
+  {
     id: 'p4',
-    name: 'DK Dish Wash Liquid (1L)',
+    name: 'Liquid Detergent - Front Load (Smart Wash) 5L',
+    shortDescription: 'Value pack for front load washing machines.',
+    fullDescription: 'The 5L DK Smart Wash is specifically formulated for front load washing machines. Its low-suds formula ensures a thorough clean without damaging your machine, while tackling tough stains.',
+    price: 550,
+    mrp: 999,
+    image: '/images/dk_front_5l.jpg',
+    category: 'Liquid',
+    scent: 'Fresh Sky',
+    rating: 4.9,
+    reviews: 142,
+    benefits: ['Low Suds Formula', 'Color Protection', 'Value Size (5 Liters)', 'Removes Tough Stains'],
+    ingredients: ['Aqua', 'Anionic Surfactants', 'Enzymes', 'Optical Brighteners', 'Perfume']
+  },
+
+  // DISH WASH LIQUID
+  {
+    id: 'p5',
+    name: 'Dish Wash Liquid 1L',
     shortDescription: 'Lemon-powered grease removal for sparkling dishes.',
     fullDescription: 'Cut through tough grease and grime with DK Dish Wash. Infused with natural lemon extracts, it leaves your dishes sparkling clean and your hands soft. High foaming action for maximum economy.',
-    price: 3.99,
-    // Ensure you save the Yellow Dish Wash image here
+    price: 120,
+    mrp: 180,
     image: '/images/dk_dish_wash.jpg',
     category: 'Dish Wash',
     scent: 'Lemon',
@@ -65,12 +85,29 @@ export const PRODUCTS: Product[] = [
     ingredients: ['Aqua', 'Lemon Extract', 'Biodegradable Surfactants', 'Glycerin']
   },
   {
-    id: 'p5',
-    name: 'DK Floor Cleaner (500ml)',
+    id: 'p6',
+    name: 'Dish Wash Liquid 500ml',
+    shortDescription: 'Compact lemon-powered dish wash liquid.',
+    fullDescription: 'Same powerful grease-cutting formula in a convenient 500ml size. Perfect for smaller households or limited storage space. Gentle on hands, tough on grease.',
+    price: 80,
+    mrp: 99,
+    image: '/images/dk_dish_wash.jpg',
+    category: 'Dish Wash',
+    scent: 'Lemon',
+    rating: 4.5,
+    reviews: 178,
+    benefits: ['Cuts Grease Fast', 'Gentle on Hands', 'Compact Size', 'Refreshing Lemon Scent'],
+    ingredients: ['Aqua', 'Lemon Extract', 'Biodegradable Surfactants', 'Glycerin']
+  },
+
+  // FLOOR CLEANER
+  {
+    id: 'p7',
+    name: 'Floor Cleaner 1L',
     shortDescription: 'Floral scented disinfectant floor cleaner.',
     fullDescription: 'Keep your home safe and smelling fresh with DK Floor Cleaner. Its powerful disinfecting formula kills 99.9% of germs while leaving a long-lasting floral fragrance. Safe for all floor types.',
-    price: 2.99,
-    // Ensure you save the Pink Floor Cleaner image here
+    price: 120,
+    mrp: 180,
     image: '/images/dk_floor_cleaner.jpg',
     category: 'Surface Cleaner',
     scent: 'Floral',
@@ -78,6 +115,53 @@ export const PRODUCTS: Product[] = [
     reviews: 95,
     benefits: ['Kills 99.9% Germs', 'Long-lasting Fragrance', 'Streak Free Shine', 'Safe for Kids & Pets'],
     ingredients: ['Aqua', 'Benzalkonium Chloride', 'Floral Perfume', 'Surface Active Agents']
+  },
+  {
+    id: 'p8',
+    name: 'Floor Cleaner 500ml',
+    shortDescription: 'Compact floral scented disinfectant floor cleaner.',
+    fullDescription: 'Powerful disinfecting formula in a convenient 500ml size. Kills 99.9% of germs and leaves your floors sparkling clean with a pleasant floral fragrance.',
+    price: 70,
+    mrp: 99,
+    image: '/images/dk_floor_cleaner.jpg',
+    category: 'Surface Cleaner',
+    scent: 'Floral',
+    rating: 4.7,
+    reviews: 82,
+    benefits: ['Kills 99.9% Germs', 'Compact Size', 'Long-lasting Fragrance', 'Streak Free Shine'],
+    ingredients: ['Aqua', 'Benzalkonium Chloride', 'Floral Perfume', 'Surface Active Agents']
+  },
+
+  // COMBO PACKS
+  {
+    id: 'p9',
+    name: 'Home Care Combo Pack (Small)',
+    shortDescription: 'Complete cleaning solution - 1 Liquid Detergent (1L) + 1 Floor Cleaner (500ml) + 1 Dish Wash (500ml)',
+    fullDescription: 'Get everything you need for a sparkling clean home in one convenient pack. Includes 1L Liquid Detergent, 500ml Floor Cleaner, and 500ml Dish Wash Liquid. Perfect starter pack for new homes.',
+    price: 210,
+    mrp: 418,
+    image: '/images/dk_dish_wash.jpg',
+    category: 'Combo',
+    scent: 'Mixed',
+    rating: 4.9,
+    reviews: 156,
+    benefits: ['Complete Home Care', 'Value Pack', 'All Essential Products', 'Cost Effective'],
+    ingredients: ['See individual products']
+  },
+  {
+    id: 'p10',
+    name: 'Home Care Combo Pack (Large)',
+    shortDescription: 'Premium cleaning solution - 1 Liquid Detergent (5L) + 1 Floor Cleaner (1L) + 1 Dish Wash (1L)',
+    fullDescription: 'The ultimate home care solution for larger families. Includes 5L Liquid Detergent, 1L Floor Cleaner, and 1L Dish Wash Liquid. Maximum value and convenience in one package.',
+    price: 750,
+    mrp: 1359,
+    image: '/images/dk_front_5l.jpg',
+    category: 'Combo',
+    scent: 'Mixed',
+    rating: 5.0,
+    reviews: 203,
+    benefits: ['Best Value', 'Complete Home Care', 'Premium Sizes', 'Family Pack'],
+    ingredients: ['See individual products']
   }
 ];
 

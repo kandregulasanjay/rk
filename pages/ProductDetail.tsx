@@ -66,30 +66,32 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ addToCart }) => {
                 {product.fullDescription}
               </p>
 
-              <div className="flex items-center justify-between mb-8 border-t border-b border-gray-100 py-6">
-                <div>
-                   <span className="block text-gray-500 text-sm">Price</span>
-                   <span className="text-3xl font-heading font-bold text-neutral-dark">${product.price.toFixed(2)}</span>
+              <div className="mb-8 border-t border-b border-gray-100 py-6">
+                <div className="mb-6">
+                   <div className="flex items-center gap-3 mb-2">
+                     <span className="text-sm text-gray-400 line-through">₹{product.mrp}</span>
+                     <span className="text-xs font-bold bg-green-100 text-green-700 px-3 py-1 rounded">
+                       {Math.round(((product.mrp - product.price) / product.mrp) * 100)}% OFF
+                     </span>
+                   </div>
+                   <span className="text-4xl font-heading font-bold text-neutral-dark">₹{product.price}</span>
                 </div>
-                <div className="flex items-center gap-4">
-                  {/* Quantity selector could go here */}
-                  <button 
-                    onClick={() => addToCart(product)}
-                    className="bg-sky-main hover:bg-sky-deep text-white px-8 py-4 rounded-full font-bold text-lg flex items-center gap-2 transition-transform active:scale-95 shadow-lg hover:shadow-sky-200"
-                  >
-                    <ShoppingCart className="w-5 h-5" /> Add to Cart
-                  </button>
-                </div>
+                <button
+                  onClick={() => addToCart(product)}
+                  className="w-full bg-sky-main hover:bg-sky-deep text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-lg hover:shadow-sky-200"
+                >
+                  <ShoppingCart className="w-5 h-5" /> Add to Cart
+                </button>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 text-sm text-gray-500">
+              {/* <div className="grid grid-cols-2 gap-4 text-sm text-gray-500">
                  <div className="flex items-center gap-2">
                     <Truck className="w-4 h-4 text-sky-main" /> Free Shipping over $30
                  </div>
                  <div className="flex items-center gap-2">
                     <ShieldCheck className="w-4 h-4 text-sky-main" /> 30-Day Money Back
                  </div>
-              </div>
+              </div> */}
             </div>
           </div>
 

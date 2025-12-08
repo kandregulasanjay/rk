@@ -6,7 +6,7 @@ export interface Product {
   price: number;
   mrp: number;
   image: string;
-  category: 'Liquid' | 'Powder' | 'Pods' | 'Dish Wash' | 'Surface Cleaner' | 'Combo';
+  category: 'Liquid Detergent' | 'Dish Wash' | 'Floor Cleaner' | 'Combo';
   scent: 'Fresh Sky' | 'Lavender' | 'Unscented' | 'Lemon' | 'Floral' | 'Mixed';
   rating: number;
   reviews: number;

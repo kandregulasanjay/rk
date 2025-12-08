@@ -69,8 +69,9 @@ export const Home: React.FC<HomeProps> = ({ addToCart }) => {
           
           <div className="text-white text-center lg:text-left">
             <h1 className="text-5xl md:text-7xl font-heading font-extrabold tracking-tight mb-6 leading-tight drop-shadow-sm">
-              Deep Clean.<br/>
-              <span className="text-sky-100">Zero Compromise.</span>
+              Smart Wash.<br/>
+              <span className="text-sky-100">Protects Fabric.</span><br/>
+              <span className="text-sky-100">Attacks Dirt.</span>
             </h1>
             <p className="text-xl md:text-2xl text-sky-50 mb-8 max-w-lg mx-auto lg:mx-0 font-light">
               Experience the next generation of stain removal with our advanced enzymatic formula.
@@ -141,43 +142,43 @@ export const Home: React.FC<HomeProps> = ({ addToCart }) => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-             {/* Card 1: Machine Wash */}
+             {/* Card 1: Top Load Machine */}
              <div className="relative h-[400px] rounded-3xl overflow-hidden group cursor-pointer shadow-lg">
                 <div className="absolute inset-0 bg-gray-200">
-                  <img src="https://picsum.photos/seed/machine_bg/800/600" alt="Washing Machine" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src="/images/bg/pink-bg.png" alt="Top Load Machine" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 </div>
                 <div className="absolute bottom-0 left-0 p-8 w-full z-10">
-                   <h3 className="text-3xl font-heading font-bold text-white mb-2">Machine Wash</h3>
-                   <p className="text-gray-200 mb-6">Designed for Front & Top Load Machines</p>
+                   <h3 className="text-3xl font-heading font-bold text-white mb-2">Top Load</h3>
+                   <p className="text-gray-200 mb-6">Rich Lather Formula</p>
                    <Link to="/products?cat=Liquid" className="inline-flex items-center bg-white text-neutral-dark px-6 py-3 rounded-full font-bold hover:bg-sky-main hover:text-white transition-colors">
                       Shop Liquid <ChevronRight className="w-4 h-4 ml-2" />
                    </Link>
                 </div>
-                <img 
-                  src={PRODUCTS[0].image} 
-                  alt="Liquid Bottle" 
-                  className="absolute bottom-4 right-4 w-40 md:w-56 drop-shadow-xl transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500" 
+                <img
+                  src="/images/hero_section_display_images/Untitled73_20251204173646.png"
+                  alt="Liquid Bottle"
+                  className="absolute bottom-14 right-8 w-20 md:w-36 drop-shadow-xl transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500"
                 />
              </div>
 
-             {/* Card 2: Hand Wash / Semi-Auto */}
+             {/* Card 2: Front Load */}
              <div className="relative h-[400px] rounded-3xl overflow-hidden group cursor-pointer shadow-lg">
                 <div className="absolute inset-0 bg-gray-200">
-                  <img src="https://picsum.photos/seed/handwash_bg/800/600" alt="Hand Washing" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src="/images/bg/blue-bg.png" alt="Front Load Machine" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 </div>
                 <div className="absolute bottom-0 left-0 p-8 w-full z-10">
-                   <h3 className="text-3xl font-heading font-bold text-white mb-2">Hand Wash</h3>
-                   <p className="text-gray-200 mb-6">High Suds Formula for Bright Whites</p>
-                   <Link to="/products?cat=Powder" className="inline-flex items-center bg-white text-neutral-dark px-6 py-3 rounded-full font-bold hover:bg-sky-main hover:text-white transition-colors">
-                      Shop Powder <ChevronRight className="w-4 h-4 ml-2" />
+                   <h3 className="text-3xl font-heading font-bold text-white mb-2">Front Load</h3>
+                   <p className="text-gray-200 mb-6">Rich Lather Formula</p>
+                   <Link to="/products?cat=Liquid" className="inline-flex items-center bg-white text-neutral-dark px-6 py-3 rounded-full font-bold hover:bg-sky-main hover:text-white transition-colors">
+                      Shop Liquid <ChevronRight className="w-4 h-4 ml-2" />
                    </Link>
                 </div>
-                <img 
-                  src={PRODUCTS[2].image} 
-                  alt="Powder Pack" 
-                  className="absolute bottom-4 right-4 w-40 md:w-56 drop-shadow-xl transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500" 
+                <img
+                  src="/images/hero_section_display_images/Untitled73_20251204173737.png"
+                  alt="Liquid Bottle"
+                  className="absolute bottom-14 right-8 w-20 md:w-36 drop-shadow-xl transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500"
                 />
              </div>
           </div>
@@ -282,13 +283,13 @@ export const Home: React.FC<HomeProps> = ({ addToCart }) => {
             <div className="flex flex-col md:flex-row items-center gap-12">
                <div className="md:w-1/2">
                   <div className="inline-block bg-sky-500 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Editor's Choice</div>
-                  <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">CleanSky Liquid Advance</h2>
+                  <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">RK Liquid Detergent</h2>
                   <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                     Experience our most advanced formula yet. Designed to penetrate deep layers of fabric to lift invisible stains and odors while preserving color vibrancy.
                   </p>
                   <div className="flex flex-wrap gap-4">
                      <button onClick={() => addToCart(heroProduct)} className="bg-sky-main hover:bg-sky-400 text-white px-8 py-4 rounded-full font-bold text-lg transition-colors">
-                        Add to Cart - ${heroProduct.price}
+                        Add to Cart - ₹{heroProduct.price}
                      </button>
                      <Link to={`/products/${heroProduct.id}`} className="bg-transparent border-2 border-white hover:bg-white hover:text-neutral-dark text-white px-8 py-4 rounded-full font-bold text-lg transition-colors">
                         Learn More
@@ -309,18 +310,17 @@ export const Home: React.FC<HomeProps> = ({ addToCart }) => {
               <h2 className="text-3xl font-heading font-bold text-neutral-dark inline-flex items-center gap-2">
                  Check out Our #Laundrygram <Instagram className="w-8 h-8 text-sky-main" />
               </h2>
-              <p className="text-gray-500 mt-2">Join our community of clean. Tag @CleanSky to be featured.</p>
+              <p className="text-gray-500 mt-2">Join our community of clean. Tag @RKLiquids to be featured.</p>
            </div>
-           
+
            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {LAUNDRYGRAM_POSTS.map((post) => (
-                 <div key={post.id} className="group relative aspect-square overflow-hidden rounded-xl cursor-pointer">
-                    <img src={post.image} alt="Laundry Moment" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white">
-                       <div className="text-center p-4">
-                          <Heart className="w-8 h-8 mx-auto mb-2 fill-white" />
-                          <span className="font-bold text-lg">{post.likes}</span>
-                          <p className="text-xs mt-2 line-clamp-2">{post.caption}</p>
+              {PRODUCTS.slice(0, 4).map((product) => (
+                 <div key={product.id} className="group relative aspect-square overflow-hidden rounded-xl cursor-pointer bg-gray-50">
+                    <img src={product.image} alt={product.name} className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-110" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-sky-600/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center text-white">
+                       <div className="text-center p-4 pb-6">
+                          <p className="font-bold text-sm line-clamp-2">{product.name}</p>
+                          <p className="text-xs mt-1">₹{product.price}</p>
                        </div>
                     </div>
                  </div>

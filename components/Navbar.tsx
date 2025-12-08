@@ -54,12 +54,15 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount }) => {
         <div className="flex justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="flex items-center group">
+            <Link to="/" className="flex items-center gap-3 group">
               <img
                 src="/images/logo.png"
-                alt="CleanSky Logo"
+                alt="RK Logo"
                 className="h-12 w-auto group-hover:scale-105 transition-transform"
               />
+              <span className="font-heading font-bold text-xl text-sky-main group-hover:text-sky-deep transition-colors">
+                RK Liquid Detergents
+              </span>
             </Link>
           </div>
 

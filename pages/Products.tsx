@@ -18,7 +18,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ addToCart }) => {
     return PRODUCTS.filter(p => p.category === filterCategory);
   }, [filterCategory]);
 
-  const categories = ['All', 'Liquid', 'Dish Wash', 'Surface Cleaner', 'Powder', 'Pods'];
+  const categories = ['All', 'Liquid Detergent', 'Dish Wash', 'Floor Cleaner', 'Combo'];
 
   return (
     <div className="bg-neutral-light min-h-screen pb-20">

@@ -26,16 +26,14 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount }) => {
       name: 'Laundry Tips',
       path: '/laundry-tips',
       children: [
-        { name: 'How to Use / Dosage', path: '/how-to-use' },
         { name: 'Washing Tips', path: '/laundry-tips' },
       ]
     },
     {
-      name: 'Machine 101',
+      name: 'Machine Guide',
       path: '/machine-guide',
       children: [
         { name: 'Guide to Washing Machines', path: '/machine-guide' },
-        { name: 'Common Problems', path: '/machine-guide' },
       ]
     },
     {
@@ -105,12 +103,12 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount }) => {
                 )}
               </div>
             ))}
-            <Link 
+            {/* <Link 
               to="/store-locator"
               className="text-sm font-bold uppercase tracking-wide text-neutral-dark hover:text-sky-deep transition-colors"
             >
               Where to Buy
-            </Link>
+            </Link> */}
           </div>
 
           {/* Icons / CTA */}
@@ -184,13 +182,13 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount }) => {
                 )}
               </div>
             ))}
-             <Link
+             {/* <Link
                 to="/store-locator"
                 onClick={() => setIsOpen(false)}
                 className="block py-3 text-lg font-bold text-neutral-dark border-b border-gray-50"
               >
                 Where to Buy
-              </Link>
+              </Link> */}
             
             <div className="pt-6">
                <Link 

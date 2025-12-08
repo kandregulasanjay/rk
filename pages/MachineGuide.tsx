@@ -6,7 +6,7 @@ export const MachineGuide: React.FC = () => {
     <div className="bg-neutral-light min-h-screen">
       <div className="bg-white shadow-sm py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-heading font-bold text-neutral-dark mb-2">Washing Machine 101</h1>
+          <h1 className="text-4xl font-heading font-bold text-neutral-dark mb-2">Washing Machine Guide</h1>
           <p className="text-gray-500 max-w-2xl">Everything you need to know to keep your machine running smoothly and your clothes looking their best.</p>
         </div>
       </div>

@@ -91,7 +91,7 @@ export const PRODUCTS: Product[] = [
     fullDescription: 'Same powerful grease-cutting formula in a convenient 500ml size. Perfect for smaller households or limited storage space. Gentle on hands, tough on grease.',
     price: 84,
     mrp: 99,
-    image: '/images/dk_dish_wash.jpg',
+    image: '/images/dk_dish_wash1.jpg',
     category: 'Dish Wash',
     scent: 'Lemon',
     rating: 4.5,
@@ -123,7 +123,7 @@ export const PRODUCTS: Product[] = [
     fullDescription: 'Powerful disinfecting formula in a convenient 500ml size. Kills 99.9% of germs and leaves your floors sparkling clean with a pleasant floral fragrance.',
     price: 78,
     mrp: 99,
-    image: '/images/dk_floor_cleaner.jpg',
+    image: '/images/product1.jpg',
     category: 'Floor Cleaner',
     scent: 'Floral',
     rating: 4.7,
@@ -135,12 +135,12 @@ export const PRODUCTS: Product[] = [
   // COMBO PACKS
   {
     id: 'p9',
-    name: 'Home Care Combo Pack (Small)',
+    name: 'Top Load Mini Saving Combo',
     shortDescription: 'Complete cleaning solution - 1 Liquid Detergent (1L) + 1 Floor Cleaner (500ml) + 1 Dish Wash (500ml)',
     fullDescription: 'Get everything you need for a sparkling clean home in one convenient pack. Includes 1L Liquid Detergent, 500ml Floor Cleaner, and 500ml Dish Wash Liquid. Perfect starter pack for new homes.',
     price: 260,
     mrp: 418,
-    image: '/images/combo2.jpg',
+    image: '/images/top-mini-combo.png',
     category: 'Combo',
     scent: 'Mixed',
     rating: 4.9,
@@ -150,12 +150,42 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'p10',
-    name: 'Home Care Combo Pack (Large)',
+    name: 'Front Load Mini Saving Combo',
+    shortDescription: 'Premium cleaning solution - 1 Liquid Detergent (5L) + 1 Floor Cleaner (1L) + 1 Dish Wash (1L)',
+    fullDescription: 'The ultimate home care solution for larger families. Includes 5L Liquid Detergent, 1L Floor Cleaner, and 1L Dish Wash Liquid. Maximum value and convenience in one package.',
+    price: 260,
+    mrp: 418,
+    image: '/images/combo2.jpg',
+    category: 'Combo',
+    scent: 'Mixed',
+    rating: 5.0,
+    reviews: 203,
+    benefits: ['Best Value', 'Complete Home Care', 'Premium Sizes', 'Family Pack'],
+    ingredients: ['See individual products']
+  },
+  {
+    id: 'p11',
+    name: 'Top Load Mega Saving Combo',
+    shortDescription: 'Complete cleaning solution - 1 Liquid Detergent (1L) + 1 Floor Cleaner (500ml) + 1 Dish Wash (500ml)',
+    fullDescription: 'Get everything you need for a sparkling clean home in one convenient pack. Includes 1L Liquid Detergent, 500ml Floor Cleaner, and 500ml Dish Wash Liquid. Perfect starter pack for new homes.',
+    price: 820,
+    mrp: 1359,
+    image: '/images/top-combo.jpg',
+    category: 'Combo',
+    scent: 'Mixed',
+    rating: 4.9,
+    reviews: 156,
+    benefits: ['Complete Home Care', 'Value Pack', 'All Essential Products', 'Cost Effective'],
+    ingredients: ['See individual products']
+  },
+  {
+    id: 'p12',
+    name: 'Front Load Mega Saving Combo',
     shortDescription: 'Premium cleaning solution - 1 Liquid Detergent (5L) + 1 Floor Cleaner (1L) + 1 Dish Wash (1L)',
     fullDescription: 'The ultimate home care solution for larger families. Includes 5L Liquid Detergent, 1L Floor Cleaner, and 1L Dish Wash Liquid. Maximum value and convenience in one package.',
     price: 820,
     mrp: 1359,
-    image: '/images/combo2.jpg',
+    image: '/images/front-combo.jpg',
     category: 'Combo',
     scent: 'Mixed',
     rating: 5.0,
@@ -175,29 +205,29 @@ export const LAUNDRY_TIPS = [
   {
     id: 't1',
     title: 'How to Remove Coffee Stains',
-    excerpt: 'Spilled your morning brew? Act fast with cold water and a dab of DK Smart Wash.',
-    image: 'https://picsum.photos/seed/coffee/600/400',
+    excerpt: 'Spilled your morning brew? Act fast with cold water and a dab of RK Smart Wash.',
+    image: '/images/coffe-strain.png',
     category: 'Stain Removal'
   },
   {
     id: 't2',
     title: 'Front Load vs Top Load',
     excerpt: 'Why using the right detergent type matters for your machine\'s lifespan.',
-    image: 'https://picsum.photos/seed/machine/600/400',
+    image: '/images/washing-machine.png',
     category: 'Machine Care'
   },
   {
     id: 't3',
     title: 'Sparkling Dishes Tips',
-    excerpt: 'Soak tough pans with a drop of DK Dish Wash for 10 minutes before scrubbing.',
-    image: 'https://picsum.photos/seed/dishes/600/400',
+    excerpt: 'Soak tough pans with a drop of RK Dish Wash for 10 minutes before scrubbing.',
+    image: '/images/dish-wash.png',
     category: 'Kitchen Tips'
   },
   {
     id: 't4',
     title: 'Safe Floors for Babies',
     excerpt: 'How to disinfect floors effectively without harsh chemical residues.',
-    image: 'https://picsum.photos/seed/floor/600/400',
+    image: '/images/floor-clean.png',
     category: 'Home Hygiene'
   }
 ];

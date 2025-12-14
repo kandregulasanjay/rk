@@ -33,7 +33,7 @@ export const MachineGuide: React.FC = () => {
                </li>
                <li className="flex items-start gap-2 text-gray-600">
                  <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                 <span>Requires high-efficiency (HE) low-suds detergent like CleanSky Liquid.</span>
+                 <span>Requires high-efficiency (HE) low-suds detergent like RK Liquid Detergent.</span>
                </li>
              </ul>
           </div>
@@ -55,7 +55,7 @@ export const MachineGuide: React.FC = () => {
                </li>
                <li className="flex items-start gap-2 text-gray-600">
                  <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                 <span>Works well with CleanSky Powder or Liquid.</span>
+                 <span>Works well with RK Liquid Detergent.</span>
                </li>
              </ul>
           </div>

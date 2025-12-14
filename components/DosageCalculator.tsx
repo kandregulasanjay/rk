@@ -101,7 +101,7 @@ export const DosageCalculator: React.FC = () => {
             <span className="text-5xl font-heading font-bold">{calculateDosage()}</span>
             <span className="text-xl font-medium mb-1">mL</span>
           </div>
-          <p className="text-xs text-gray-400 mt-2">Based on CleanSky Liquid Advance formula</p>
+          <p className="text-xs text-gray-400 mt-2">Based on RK Liquid Detergent formula</p>
         </div>
 
       </div>

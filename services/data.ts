@@ -246,7 +246,7 @@ export const STAINS = [
 ];
 
 export const LAUNDRYGRAM_POSTS = [
-  { id: 1, image: 'https://picsum.photos/seed/lg1/400/400', likes: 124, caption: 'Fresh sheets feel the best! #CleanSky #DKSmartWash' },
+  { id: 1, image: 'https://picsum.photos/seed/lg1/400/400', likes: 124, caption: 'Fresh sheets feel the best! #RKLiquidDetergent #SmartWash' },
   { id: 2, image: 'https://picsum.photos/seed/lg2/400/400', likes: 89, caption: 'Dishes done in minutes. 🍋 #DKDishWash' },
   { id: 3, image: 'https://picsum.photos/seed/lg3/400/400', likes: 256, caption: 'Floors so shiny you can see yourself. ✨' },
   { id: 4, image: 'https://picsum.photos/seed/lg4/400/400', likes: 145, caption: 'Laundry day made easy. #FrontLoad' },

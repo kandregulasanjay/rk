@@ -10,7 +10,7 @@ interface HomeProps {
 
 export const Home: React.FC<HomeProps> = ({ addToCart }) => {
   const featuredProducts = PRODUCTS.slice(0, 4);
-  const heroProduct = PRODUCTS[0]; // CleanSky Liquid Advance
+  const heroProduct = PRODUCTS[0]; // RK Liquid Detergent
 
   // Hero carousel images
   const heroImages = [
@@ -99,7 +99,7 @@ export const Home: React.FC<HomeProps> = ({ addToCart }) => {
                <div className="w-60 h-60 md:w-80 md:h-80 animate-float z-10 flex items-center justify-center">
                  <img
                    src={heroImages[currentImageIndex]}
-                   alt="CleanSky Products"
+                   alt="RK Liquid Detergent Products"
                    className="w-full h-full object-contain drop-shadow-2xl transform rotate-6 hover:rotate-0 transition-all duration-700"
                    key={currentImageIndex}
                  />
@@ -151,7 +151,7 @@ export const Home: React.FC<HomeProps> = ({ addToCart }) => {
                 <div className="absolute bottom-0 left-0 p-8 w-full z-10">
                    <h3 className="text-3xl font-heading font-bold text-white mb-2">Top Load</h3>
                    <p className="text-gray-200 mb-6">Rich Lather Formula</p>
-                   <Link to="/products?cat=Liquid" className="inline-flex items-center bg-white text-neutral-dark px-6 py-3 rounded-full font-bold hover:bg-sky-main hover:text-white transition-colors">
+                   <Link to="/products?cat=Liquid Detergent" className="inline-flex items-center bg-white text-neutral-dark px-6 py-3 rounded-full font-bold hover:bg-sky-main hover:text-white transition-colors">
                       Shop Liquid <ChevronRight className="w-4 h-4 ml-2" />
                    </Link>
                 </div>
@@ -170,8 +170,8 @@ export const Home: React.FC<HomeProps> = ({ addToCart }) => {
                 </div>
                 <div className="absolute bottom-0 left-0 p-8 w-full z-10">
                    <h3 className="text-3xl font-heading font-bold text-white mb-2">Front Load</h3>
-                   <p className="text-gray-200 mb-6">Rich Lather Formula</p>
-                   <Link to="/products?cat=Liquid" className="inline-flex items-center bg-white text-neutral-dark px-6 py-3 rounded-full font-bold hover:bg-sky-main hover:text-white transition-colors">
+                   <p className="text-gray-200 mb-6">Low Foam Formula</p>
+                   <Link to="/products?cat=Liquid Detergent" className="inline-flex items-center bg-white text-neutral-dark px-6 py-3 rounded-full font-bold hover:bg-sky-main hover:text-white transition-colors">
                       Shop Liquid <ChevronRight className="w-4 h-4 ml-2" />
                    </Link>
                 </div>
@@ -365,7 +365,7 @@ export const Home: React.FC<HomeProps> = ({ addToCart }) => {
                     </div>
                     <div className="ml-4">
                       <h4 className="text-lg font-bold text-neutral-dark">Select Cycle</h4>
-                      <p className="mt-1 text-gray-500">CleanSky works perfectly in cold water (30°C), saving energy and protecting fabrics.</p>
+                      <p className="mt-1 text-gray-500">RK Liquid Detergent works perfectly in cold water (30°C), saving energy and protecting fabrics.</p>
                     </div>
                   </div>
                </div>

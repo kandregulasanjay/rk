@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { Star, Check, ShoppingCart, Truck, ShieldCheck } from 'lucide-react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import { Star, Check, ShoppingCart, ShoppingBag } from 'lucide-react';
 import { PRODUCTS } from '../services/data';
 import { Product } from '../types';
 
@@ -10,6 +10,7 @@ interface ProductDetailProps {
 
 export const ProductDetail: React.FC<ProductDetailProps> = ({ addToCart }) => {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
   const [product, setProduct] = useState<Product | null>(null);
   const [activeTab, setActiveTab] = useState<'desc' | 'ingredients' | 'reviews'>('desc');
 
@@ -76,12 +77,23 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ addToCart }) => {
                    </div>
                    <span className="text-4xl font-heading font-bold text-neutral-dark">₹{product.price}</span>
                 </div>
-                <button
-                  onClick={() => addToCart(product)}
-                  className="w-full bg-sky-main hover:bg-sky-deep text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-lg hover:shadow-sky-200"
-                >
-                  <ShoppingCart className="w-5 h-5" /> Add to Cart
-                </button>
+                <div className="flex gap-3">
+                  <button
+                    onClick={() => addToCart(product)}
+                    className="flex-1 bg-sky-50 hover:bg-sky-100 text-sky-main px-6 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors border-2 border-sky-main"
+                  >
+                    <ShoppingCart className="w-5 h-5" /> Add to Cart
+                  </button>
+                  <button
+                    onClick={() => {
+                      addToCart(product);
+                      navigate('/cart');
+                    }}
+                    className="flex-1 bg-sky-main hover:bg-sky-deep text-white px-6 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-lg hover:shadow-sky-200"
+                  >
+                    <ShoppingBag className="w-5 h-5" /> Buy Now
+                  </button>
+                </div>
               </div>
 
               {/* <div className="grid grid-cols-2 gap-4 text-sm text-gray-500">

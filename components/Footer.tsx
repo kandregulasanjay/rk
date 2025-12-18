@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
               RK Liquid Detergents - Founded in 2025. We provide premium quality liquid detergents, dish wash, and floor cleaners for every household. Quality you can trust.
             </p>
           </div>
-          
+
           <div>
             <h3 className="font-heading font-bold text-lg mb-4">Shop</h3>
             <ul className="space-y-2 text-sm text-gray-400">
@@ -31,25 +31,41 @@ export const Footer: React.FC = () => {
             <h3 className="font-heading font-bold text-lg mb-4">Support</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><Link to="/how-to-use" className="hover:text-sky-main transition-colors">Dosage Guide</Link></li>
-              <li><Link to="/store-locator" className="hover:text-sky-main transition-colors">Store Locator</Link></li>
-              <li><a href="#" className="hover:text-sky-main transition-colors">Contact Us</a></li>
-              <li><a href="#" className="hover:text-sky-main transition-colors">FAQ</a></li>
+              <li><Link to="/laundry-tips" className="hover:text-sky-main transition-colors">Laundry Tips</Link></li>
+              <li><Link to="/machine-guide" className="hover:text-sky-main transition-colors">Machine Guide</Link></li>
+              <li><Link to="/about" className="hover:text-sky-main transition-colors">About Us</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-heading font-bold text-lg mb-4">Stay Fresh</h3>
-            <p className="text-gray-400 text-sm mb-4">Subscribe for tips & offers.</p>
-            <form className="flex">
-              <input 
-                type="email" 
-                placeholder="Email address" 
-                className="bg-gray-800 text-white px-4 py-2 rounded-l-md w-full focus:outline-none focus:ring-1 focus:ring-sky-main"
-              />
-              <button className="bg-sky-main hover:bg-sky-deep text-white px-4 py-2 rounded-r-md font-bold transition-colors">
-                Go
-              </button>
-            </form>
+            <h3 className="font-heading font-bold text-lg mb-4">Contact Us</h3>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li className="flex items-start gap-2">
+                <Phone size={16} className="text-sky-main mt-1 flex-shrink-0" />
+                <div>
+                  <a href="tel:+918332808881" className="hover:text-sky-main transition-colors block">+91 8332 808881</a>
+                  <a href="tel:+918332808882" className="hover:text-sky-main transition-colors block">+91 8332 808882</a>
+                </div>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail size={16} className="text-sky-main flex-shrink-0" />
+                <a href="mailto:rkdetergentesandliquids.in@gmail.com" className="hover:text-sky-main transition-colors break-all">rkdetergentesandliquids.in@gmail.com</a>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin size={16} className="text-sky-main mt-1 flex-shrink-0" />
+                <div>
+                  <p className="font-semibold text-gray-300 mb-1">Office:</p>
+                  <p>DR NO 42-18, 42-17, 42-16, Maharani Agraharam Veedhi, Veda Samajam, Salur, Vizianagaram, Parvathi Puram Manyam, Andhra Pradesh - 535502</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin size={16} className="text-sky-main mt-1 flex-shrink-0" />
+                <div>
+                  <p className="font-semibold text-gray-300 mb-1">Factory:</p>
+                  <p>P.Konavalasa (Village), Pachipenta (Mandal), Parvathipuram Manyam (Dist), Survey no-17</p>
+                </div>
+              </li>
+            </ul>
             <div className="flex space-x-4 mt-6">
               <a href="#" className="text-gray-400 hover:text-white transition-colors"><Facebook size={20} /></a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors"><Twitter size={20} /></a>
@@ -57,7 +73,7 @@ export const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
           <p>&copy; 2025 RK Liquid Detergent. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">

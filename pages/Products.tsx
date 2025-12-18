@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
-import { Filter, Plus } from 'lucide-react';
+import { Link, useSearchParams, useNavigate } from 'react-router-dom';
+import { Filter, Plus, ShoppingBag } from 'lucide-react';
 import { PRODUCTS } from '../services/data';
 import { Product } from '../types';
 
@@ -10,6 +10,7 @@ interface ProductsPageProps {
 
 export const ProductsPage: React.FC<ProductsPageProps> = ({ addToCart }) => {
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const initialCat = searchParams.get('cat') || 'All';
   const [filterCategory, setFilterCategory] = useState<string>(initialCat);
   
@@ -100,12 +101,23 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ addToCart }) => {
                           <span className="text-sm text-gray-400 line-through">₹{product.mrp}</span>
                           <span className="font-heading font-bold text-xl text-neutral-dark">₹{product.price}</span>
                         </div>
-                        <button
-                          onClick={() => addToCart(product)}
-                          className="w-full flex items-center justify-center gap-2 bg-sky-main hover:bg-sky-deep text-white px-4 py-2 rounded-full font-bold text-sm transition-colors"
-                        >
-                          <Plus className="w-4 h-4" /> Add to Cart
-                        </button>
+                        <div className="flex gap-2">
+                          <button
+                            onClick={() => addToCart(product)}
+                            className="flex-1 flex items-center justify-center gap-1 bg-sky-50 hover:bg-sky-100 text-sky-main px-3 py-2 rounded-full font-bold text-sm transition-colors"
+                          >
+                            <Plus className="w-4 h-4" /> Add
+                          </button>
+                          <button
+                            onClick={() => {
+                              addToCart(product);
+                              navigate('/cart');
+                            }}
+                            className="flex-1 flex items-center justify-center gap-1 bg-sky-main hover:bg-sky-deep text-white px-3 py-2 rounded-full font-bold text-sm transition-colors"
+                          >
+                            <ShoppingBag className="w-4 h-4" /> Buy Now
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>

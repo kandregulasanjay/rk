@@ -113,16 +113,16 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount }) => {
 
           {/* Icons / CTA */}
           <div className="hidden lg:flex items-center space-x-6">
-            <div className="relative cursor-pointer group">
+            <Link to="/cart" className="relative cursor-pointer group">
               <ShoppingCart className="h-6 w-6 text-neutral-dark group-hover:text-sky-deep transition-colors" />
               {cartCount > 0 && (
                 <span className="absolute -top-2 -right-2 bg-sky-main text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
                   {cartCount}
                 </span>
               )}
-            </div>
-            <Link 
-              to="/products"
+            </Link>
+            <Link
+              to="/cart"
               className="bg-sky-main hover:bg-sky-deep text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
               Buy Now
@@ -131,14 +131,14 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount }) => {
 
           {/* Mobile menu button */}
           <div className="flex items-center lg:hidden">
-            <div className="relative mr-4">
+            <Link to="/cart" className="relative mr-4">
               <ShoppingCart className="h-6 w-6 text-neutral-dark" />
               {cartCount > 0 && (
                 <span className="absolute -top-2 -right-2 bg-sky-main text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                   {cartCount}
                 </span>
               )}
-            </div>
+            </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-neutral-dark hover:text-sky-main p-2"

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import { LAUNDRY_TIPS, STAINS } from '../services/data';
 
@@ -13,9 +14,9 @@ export const LaundryTips: React.FC = () => {
             From stubborn stains to delicate fabrics, we've got the expert advice you need.
           </p>
           <div className="max-w-md mx-auto relative">
-            <input 
-              type="text" 
-              placeholder="How do I remove red wine?" 
+            <input
+              type="text"
+              placeholder="How do I remove red wine?"
               className="w-full pl-5 pr-12 py-4 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-sky-main"
             />
             <button className="absolute right-2 top-2 bg-sky-main text-white p-2 rounded-full hover:bg-sky-deep">
@@ -29,14 +30,14 @@ export const LaundryTips: React.FC = () => {
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-end mb-8">
           <h2 className="text-3xl font-heading font-bold text-neutral-dark">Stain Removal Guide</h2>
-          <a href="#" className="text-sky-main font-bold hover:underline">View A-Z Guide</a>
+          <Link to="/article/t1" className="text-sky-main font-bold hover:underline">View Guide</Link>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
           {STAINS.map((stain) => (
-            <div key={stain.name} className="bg-white border border-gray-100 shadow-sm rounded-xl p-6 text-center hover:shadow-md hover:border-sky-200 cursor-pointer transition-all group">
+            <Link to="/article/t1" key={stain.name} className="bg-white border border-gray-100 shadow-sm rounded-xl p-6 text-center hover:shadow-md hover:border-sky-200 cursor-pointer transition-all group">
               <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{stain.icon}</div>
               <h3 className="font-bold text-gray-700 text-sm">{stain.name}</h3>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
@@ -47,7 +48,7 @@ export const LaundryTips: React.FC = () => {
           <h2 className="text-3xl font-heading font-bold text-neutral-dark mb-10">Latest Laundry Tips</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {LAUNDRY_TIPS.map((tip) => (
-              <div key={tip.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow flex flex-col h-full group">
+              <Link to={`/article/${tip.id}`} key={tip.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow flex flex-col h-full group">
                 <div className="relative h-48 overflow-hidden">
                   <img src={tip.image} alt={tip.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-neutral-dark text-xs font-bold px-2 py-1 rounded">
@@ -65,7 +66,7 @@ export const LaundryTips: React.FC = () => {
                     <span className="text-sky-main font-bold text-sm hover:underline cursor-pointer">Read Article</span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -10,6 +10,8 @@ import { StoreLocator } from './pages/StoreLocator';
 import { About } from './pages/About';
 import { MachineGuide } from './pages/MachineGuide';
 import { LaundryTips } from './pages/LaundryTips';
+import { ArticleDetail } from './pages/ArticleDetail';
+import { CartPage } from './pages/Cart';
 import { Product, CartItem } from './types';
 
 function App() {
@@ -20,16 +22,32 @@ function App() {
     setCart(prev => {
       const existing = prev.find(item => item.id === product.id);
       if (existing) {
-        return prev.map(item => 
+        return prev.map(item =>
           item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
         );
       }
       return [...prev, { ...product, quantity: 1 }];
     });
-    
+
     // Show toast
     setShowToast(true);
     setTimeout(() => setShowToast(false), 3000);
+  };
+
+  const updateQuantity = (productId: string, quantity: number) => {
+    setCart(prev =>
+      prev.map(item =>
+        item.id === productId ? { ...item, quantity } : item
+      )
+    );
+  };
+
+  const removeFromCart = (productId: string) => {
+    setCart(prev => prev.filter(item => item.id !== productId));
+  };
+
+  const clearCart = () => {
+    setCart([]);
   };
 
   const cartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
@@ -38,7 +56,7 @@ function App() {
     <Router>
       <div className="flex flex-col min-h-screen font-sans text-neutral-dark">
         <Navbar cartCount={cartCount} />
-        
+
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home addToCart={addToCart} />} />
@@ -50,6 +68,15 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/machine-guide" element={<MachineGuide />} />
             <Route path="/laundry-tips" element={<LaundryTips />} />
+            <Route path="/article/:id" element={<ArticleDetail />} />
+            <Route path="/cart" element={
+              <CartPage
+                cart={cart}
+                updateQuantity={updateQuantity}
+                removeFromCart={removeFromCart}
+                clearCart={clearCart}
+              />
+            } />
           </Routes>
         </main>
 

@@ -207,28 +207,107 @@ export const LAUNDRY_TIPS = [
     title: 'How to Remove Coffee Stains',
     excerpt: 'Spilled your morning brew? Act fast with cold water and a dab of RK Smart Wash.',
     image: '/images/coffe-strain.png',
-    category: 'Stain Removal'
+    category: 'Stain Removal',
+    content: `Coffee stains can be stubborn, but with the right approach, they're easy to tackle. Here's how to remove coffee stains effectively:
+
+Step 1: Act Fast
+The sooner you treat a coffee stain, the easier it will be to remove. Fresh stains are much simpler to handle than dried ones.
+
+Step 2: Rinse with Cold Water
+Run cold water through the back of the stain. This pushes the coffee out of the fabric fibers rather than deeper into them. Avoid hot water as it can set the stain permanently.
+
+Step 3: Apply RK Liquid Detergent
+Apply a small amount of RK Liquid Detergent directly to the stain. Gently rub the fabric together or use a soft brush to work the detergent into the stain.
+
+Step 4: Let It Sit
+Allow the detergent to sit on the stain for 5-10 minutes. This gives the cleaning agents time to break down the coffee oils and pigments.
+
+Step 5: Wash as Normal
+Wash the garment in your washing machine using RK Liquid Detergent. For top load machines, use our Top Load formula; for front load machines, use the Front Load formula.
+
+Pro Tip: For older, set-in coffee stains, soak the garment in a mixture of water and RK Liquid Detergent for 30 minutes before washing.`
   },
   {
     id: 't2',
     title: 'Front Load vs Top Load',
     excerpt: 'Why using the right detergent type matters for your machine\'s lifespan.',
     image: '/images/washing-machine.png',
-    category: 'Machine Care'
+    category: 'Machine Care',
+    content: `Choosing the right detergent for your washing machine type is crucial for optimal cleaning and machine longevity. Here's what you need to know:
+
+Top Load Washing Machines
+Top load machines use more water and agitate clothes vigorously. They require detergents that produce rich lather to lift dirt effectively.
+
+- Use RK Liquid Detergent - Top Load (Smart Wash)
+- Rich lather formula works with high water levels
+- Deep cleaning action for heavily soiled clothes
+- Works effectively in both hot and cold water
+
+Front Load Washing Machines
+Front load machines use less water and tumble clothes gently. They require low-suds detergents to prevent excess foam buildup.
+
+- Use RK Liquid Detergent - Front Load (Smart Wash)
+- Low-suds formula prevents residue buildup
+- Concentrated cleaning power
+- Protects your machine from damage
+
+Why It Matters
+Using the wrong detergent can cause excess foam in front load machines leading to poor rinsing, residue buildup that can damage seals and drums, reduced cleaning effectiveness, and unpleasant odors over time.
+
+RK Liquid Detergent Recommendation
+Always match your detergent to your machine type. RK offers specifically formulated products for both machine types, ensuring optimal cleaning and machine protection.`
   },
   {
     id: 't3',
     title: 'Sparkling Dishes Tips',
     excerpt: 'Soak tough pans with a drop of RK Dish Wash for 10 minutes before scrubbing.',
     image: '/images/dish-wash.png',
-    category: 'Kitchen Tips'
+    category: 'Kitchen Tips',
+    content: `Getting sparkling clean dishes is easy with the right technique and RK Dish Wash. Follow these tips for perfect results every time:
+
+Pre-Soaking Magic
+For tough, stuck-on food: Fill the pan with warm water, add a few drops of RK Dish Wash, let it soak for 10-15 minutes, and food residue will lift off easily.
+
+The Right Amount
+A little goes a long way with RK Dish Wash. For a sink full of dishes use 2-3 squirts, for individual items use 1 small drop, and for greasy pans use 2 drops directly on the surface.
+
+Hot vs Cold Water
+Use hot water for greasy dishes and cookware, warm water for everyday dishes and glasses, and cool water for delicate items.
+
+Cleaning Order
+Wash dishes in this order for best results: glasses and cups first (least dirty), then plates and bowls, utensils, and finally pots and pans (most soiled).
+
+Rinsing Tips
+Rinse thoroughly with clean water. Air dry on a rack for streak-free finish. For crystal-clear glasses, rinse with a splash of vinegar.
+
+RK Dish Wash Benefits
+Cuts through grease instantly, gentle on hands, refreshing lemon scent, and leaves a residue-free shine.`
   },
   {
     id: 't4',
     title: 'Safe Floors for Babies',
     excerpt: 'How to disinfect floors effectively without harsh chemical residues.',
     image: '/images/floor-clean.png',
-    category: 'Home Hygiene'
+    category: 'Home Hygiene',
+    content: `When you have little ones crawling around, clean floors are essential. Here's how to keep your floors safe and hygienic with RK Floor Cleaner:
+
+Why Floor Hygiene Matters
+Babies spend a lot of time on the floor - crawling, playing, and even putting toys in their mouths. Clean floors protect them from harmful bacteria and germs, allergens and dust, and chemical residues from improper cleaning.
+
+Safe Cleaning with RK Floor Cleaner
+RK Floor Cleaner is formulated to be tough on germs but safe for your family. It kills 99.9% of germs, leaves no harmful residue when dry, has a pleasant non-irritating floral fragrance, and is safe for all floor types.
+
+Proper Dilution
+For baby-safe cleaning: Add 2 capfuls of RK Floor Cleaner to a bucket of water, mop the floor thoroughly, and allow to air dry completely before letting babies play.
+
+Cleaning Frequency
+Clean high-traffic areas and play areas daily. Bedrooms should be cleaned 2-3 times per week. After guests visit, clean the same day.
+
+Extra Tips for Baby Safety
+Always let floors dry completely before allowing crawling. Clean up spills immediately. Pay extra attention to corners and edges. Wash baby toys regularly with diluted RK Dish Wash.
+
+RK Floor Cleaner Benefits
+Long-lasting fragrance, streak-free shine, safe for kids and pets when dry, and works on tiles, marble, and vinyl.`
   }
 ];
 

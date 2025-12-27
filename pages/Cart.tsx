@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Trash2, Plus, Minus, ShoppingBag, Mail, Phone, ArrowLeft, Building2, Copy, Check } from 'lucide-react';
+import { Trash2, Plus, Minus, ShoppingBag, Mail, Phone, ArrowLeft, CreditCard, Loader2 } from 'lucide-react';
 import { CartItem } from '../types';
+import { initializeRazorpayPayment, RazorpayResponse } from '../services/razorpay';
 
 interface CartPageProps {
   cart: CartItem[];
@@ -11,19 +12,51 @@ interface CartPageProps {
 }
 
 export const CartPage: React.FC<CartPageProps> = ({ cart, updateQuantity, removeFromCart, clearCart }) => {
-  const [copiedField, setCopiedField] = useState<string | null>(null);
-
-  const copyToClipboard = (text: string, field: string) => {
-    navigator.clipboard.writeText(text);
-    setCopiedField(field);
-    setTimeout(() => setCopiedField(null), 2000);
-  };
+  const [isProcessingPayment, setIsProcessingPayment] = useState(false);
+  const [paymentStatus, setPaymentStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
 
   // Calculate totals
   const subtotal = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
   const totalMRP = cart.reduce((acc, item) => acc + (item.mrp * item.quantity), 0);
   const totalSavings = totalMRP - subtotal;
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+
+  // Handle Razorpay Payment
+  const handleRazorpayPayment = async () => {
+    setIsProcessingPayment(true);
+    setPaymentStatus(null);
+
+    const cartItemsForPayment = cart.map(item => ({
+      id: item.id,
+      name: item.name,
+      quantity: item.quantity,
+      price: item.price,
+    }));
+
+    await initializeRazorpayPayment(
+      subtotal,
+      cartItemsForPayment,
+      { name: '', email: '', phone: '' },
+      (response: RazorpayResponse) => {
+        setIsProcessingPayment(false);
+        setPaymentStatus({
+          type: 'success',
+          message: `Payment successful! Order ID: ${response.razorpay_order_id}`,
+        });
+        // Clear cart after successful payment
+        clearCart();
+      },
+      (error: string) => {
+        setIsProcessingPayment(false);
+        if (error !== 'Payment cancelled') {
+          setPaymentStatus({
+            type: 'error',
+            message: error,
+          });
+        }
+      }
+    );
+  };
 
   if (cart.length === 0) {
     return (
@@ -148,6 +181,37 @@ export const CartPage: React.FC<CartPageProps> = ({ cart, updateQuantity, remove
                   🎁 You're saving ₹{totalSavings} on this order!
                 </p>
               </div>
+
+              {/* Payment Status Message */}
+              {paymentStatus && (
+                <div className={`mt-4 p-3 rounded-lg ${paymentStatus.type === 'success' ? 'bg-green-100 border border-green-300' : 'bg-red-100 border border-red-300'}`}>
+                  <p className={`text-sm font-medium ${paymentStatus.type === 'success' ? 'text-green-700' : 'text-red-700'}`}>
+                    {paymentStatus.type === 'success' ? '✅' : '❌'} {paymentStatus.message}
+                  </p>
+                </div>
+              )}
+
+              {/* Razorpay Pay Now Button */}
+              <button
+                onClick={handleRazorpayPayment}
+                disabled={isProcessingPayment}
+                className="mt-4 w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-4 py-3 rounded-lg font-bold transition-all shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
+              >
+                {isProcessingPayment ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    Processing...
+                  </>
+                ) : (
+                  <>
+                    <CreditCard className="w-5 h-5" />
+                    Pay ₹{subtotal} with Razorpay
+                  </>
+                )}
+              </button>
+              <p className="text-xs text-gray-500 text-center mt-2">
+                Secure payment powered by Razorpay
+              </p>
             </div>
 
             {/* Contact to Order */}
